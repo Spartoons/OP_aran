@@ -1,32 +1,36 @@
 #include <stdio.h>
 #include <wiringPi.h>
+#include <unistd.h>
 
-int main (void)
+int main(void)
 {
-	int r = 10, y = 13, g = 16;
+    int r = 10, y = 13, g = 16;
 
-	wiringPiSetup();
+    wiringPiSetup();
 
+    while (true)
+    {
+        digitalWrite(g, HIGH);
+        printf("Green light\n");
+        digitalWrite(r, LOW);
+        printf("Red light\n");
+        digitalWrite(y, LOW);
+        delay(7000);
 
-  while (True) {
-    digitalWrite (g, HIGH);
-    printf();
-    digitalWrite (r, LOW);
-    printf();
-    digitalWrite (y, LOW);
-		delay (7000);
-    digitalWrite (y, HIGH);
-    printf();
-    digitalWrite (r, LOW);
-    printf();
-    digitalWrite (g, LOW);
-		delay (4000);
-    digitalWrite (r, HIGH);
-    printf();
-    digitalWrite (g, LOW);
-    printf();
-    digitalWrite (y, LOW);
-		delay (6000);
+        digitalWrite(y, HIGH);
+        printf("Yellow light\n");
+        digitalWrite(r, LOW);
+        printf("Red light\n");
+        digitalWrite(g, LOW);
+        delay(4000);
 
-	return 0;
+        digitalWrite(r, HIGH);
+        printf("Red light\n");
+        digitalWrite(g, LOW);
+        printf("Green light\n");
+        digitalWrite(y, LOW);
+        delay(6000);
+    }
+
+    return 0;
 }
