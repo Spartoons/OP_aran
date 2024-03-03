@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <wiringPi.h>
-#include <unistd.h>
 
 int main(void)
 {
@@ -8,7 +7,7 @@ int main(void)
 
     wiringPiSetup();
 
-    while (true)
+    while (1)
     {
         digitalWrite(g, HIGH);
         printf("Green light\n");
