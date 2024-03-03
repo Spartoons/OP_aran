@@ -8,7 +8,7 @@ int main (void)
 	wiringPiSetup();
 
 
-  while True{
+  while (True) {
     digitalWrite (g, HIGH);
     printf();
     digitalWrite (r, LOW);
