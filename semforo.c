@@ -4,9 +4,11 @@
 int main(void)
 {
     int r = 11, y = 9, g = 16;
-
+    
     wiringPiSetup();
-
+    pinMode (r, OUTPUT);
+    pinMode (y, OUTPUT);
+    pinMode (g, OUTPUT);
     while (1)
     {
         digitalWrite(g, HIGH);
