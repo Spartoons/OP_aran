@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int r = 10, y = 13, g = 16;
+    int r = 11, y = 9, g = 16;
 
     wiringPiSetup();
 
